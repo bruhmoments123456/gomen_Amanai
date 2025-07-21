@@ -11,31 +11,56 @@ with tabmessanger:
     st.header("messanger.com")
     st.title("chating or friends...only that")
 with tabtest:
+    st.title("all class color:1.red impossible(you write not a number),2.yellow easy(warning),3.green easy(normal iq),4.blue easy(unnderground genius)")
     st.header("test.com")
     st.title("what is your age?")
     iq=st.number_input("YoUr Iq:",min_value=0.0,max_value=1000.0,value=100.0,step=0.1)
-    if st.button("IQ"):
-        st.success(f"Ok:{iq:.0f}")
-        if iq<85:
-            st.warning("you StUpId")
-        elif 85<iq<116:
-            st.info("yo bro your brain is normal")
-        elif iq>115:
-            st.info("you are better than me T_T(crying)")
+    age0=st.number_input("YoUr AgE:",min_value=0.0,max_value=150.0,value=18.0,step=1.0)
+    if st.button("sure?"):
+        if age0<5 and iq<80:
+            st.warning("Try to let your baby learn more and more, your baby IQ is less than normal")
+        elif 5<=age0<=7 and iq<85:
+            st.warning("Try to let your kid learn more and more, your kid IQ is less than normal")
+        elif 8<=age0<=12 and iq<90:
+            st.warning("Try to let your kid learn more and more, your kid IQ is less than normal")
+        elif 13<=age0<=17 and iq<90:
+            st.warning("Try to learn more and more, your IQ is less than normal")
+        elif age0>17 and iq<85:
+            st.warning("Try to learn more and more, your IQ is less than normal")
+        elif age0<5 and iq>115:
+            st.info("yooo, your baby is an underground genius")
+        elif 5<=age0<=7 and iq>115:
+            st.info("yooo, your kid is an underground genius")
+        elif 8<=age0<=12 and iq>115:
+            st.info("yooo, your kid is an underground genius")
+        elif 13<=age0<=17 and iq>115:
+            st.info("yooo, you are an underground genius")
+        elif age0>17 and iq>115:
+            st.info("yooo, you are an genius")
+        elif age0<5 and 80<=iq<=115:
+            st.success("your baby brain is not bad")
+        elif 5<=age0<=7 and 85<=iq<=115:
+            st.success("your kid brain is not bad")
+        elif 8<=age0<=12 and 90<=iq<=115:
+            st.success("your kid brain is not bad")
+        elif 13<=age0<=17 and 90<=iq<=115:
+            st.success("your brain is not bad")
+        elif age0>17 and 85<=iq<=115:
+            st.success("your brain is not bad")
         else:
             st.error("you write wrong but..... HOW CAN YOU WRITE WRONG... THIS CANT BE TRUE")
 with tabhelp:
+    st.title("all class color:1.red impossible(you write not a number),2.yellow easy(warning),3.green easy(normal bmi)")
     st.header("help.com")
     st.title("bmi")
     weight=st.number_input("YoUr WeIgHt(kg):",min_value=10.0,max_value=1000.0,value=60.0,step=1.0)
     height=st.number_input("YoUr HeIgHt(Meter):",min_value=0.4,max_value=2.5,value=1.7,step=0.01)
     bmi=weight/height**2
-    if st.button("bmi"):
-        st.success(f"Ok bmi:{bmi:.2f}")
+    if st.button("sure"):
         if bmi<18.5:
             st.warning("you're skinny")
         elif 18.4<bmi<24.9:
-            st.info("yo bro your weight is normal")
+            st.success("yo bro your weight is normal")
         elif bmi>25:
             st.warning("you're overweight")
         elif 25<bmi<30:
@@ -49,11 +74,12 @@ with tabhelp:
         else:
             st.error("you write wrong but..... HOW CAN YOU WRITE WRONG... THIS CANT BE TRUE")
 with tabtestheartrate:
+    st.title("all class color:1.red impossible(you write not a number),2.yellow easy(warning),3.green easy(normal heartrate)")
     st.header("test3.com")
     st.title("safe heartrate")
     age=int(st.number_input("YoUr AgE:",min_value=0.0,max_value=130.0,value=18.0,step=1.0,key="heart"))
     heartrate=st.number_input("YoUr HeArTrAtE(bpm):",min_value=0.0,max_value=200.0,value=80.0,step=1.0)
-    if st.button("heart"):
+    if st.button("sure..."):
         if age<=1 and heartrate<100 or heartrate>160:
             st.warning("your baby heartrate is not safe")
         elif 1<age<11 and heartrate<70 or heartrate>120:
@@ -63,37 +89,39 @@ with tabtestheartrate:
         elif age>65 and heartrate<50 or heartrate>100:
             st.warning("your heartrate is not safe")
         elif age<=1 and 100<=heartrate<=160:
-            st.info("your baby heartrate is normal")
+            st.success("your baby heartrate is normal")
         elif 1<age<11 and 70<=heartrate<=120:
-            st.info("your heartrate is normal")
+            st.success("your heartrate is normal")
         elif 10<age<64 and 60<=heartrate<=100:
-            st.info("your heartrate is normal")
+            st.success("your heartrate is normal")
         elif age>65 and 50<=heartrate<=100:
-            st.info("your heartrate is normal")
+            st.success("your heartrate is normal")
         else:
             st.error("you write wrong but..... HOW CAN YOU WRITE WRONG... THIS CANT BE TRUE")
 with tabteststeps:
+    st.title("all class color:1.red impossible(you write not a number),2.green easy(normal liter of water)")
     st.header("test2.com")
     st.title("appropriate number of steps per day")
     age2=int(st.number_input("YoUr AgE:",min_value=0.0,max_value=130.0,value=18.0,step=1.0,key="age steps"))
-    if st.button("steps"):
+    if st.button("SuRe?"):
         st.success(f"ok age:{age2:.0f}")
         if age2<18:
-            st.info("you must walk 12000-15000 steps")
+            st.success("you must walk 12000-15000 steps")
         elif 17<age2<40:
-            st.info("you must walk 8000-10000 steps")
+            st.success("you must walk 8000-10000 steps")
         elif 39<age2<65:
-            st.warning("you must walk 7000-9000 steps")
+            st.success("you must walk 7000-9000 steps")
         elif age2>64:
-            st.warning("you must walk 6000-8000 steps")
+            st.success("you must walk 6000-8000 steps")
         else:
             st.error("you write wrong but..... HOW CAN YOU WRITE WRONG... THIS CANT BE TRUE")
 with tabdrink:
+    st.title("all class color:1.red impossible(you write not a number),2.yellow easy(warning),3.green easy(normal liter of water)")
     st.header("test3.com")
     st.title("safe liter of water per day")
     drink=st.number_input("YoUr DrInK pEr DaY(liter):",min_value=1.0,max_value=8.0,value=2.0,step=1.0)
     age3=int(st.number_input("YoUr AgE:",min_value=0.0,max_value=130.0,value=18.0,step=1.0,key="age_drink"))
-    if st.button("drink"):
+    if st.button("SuRe..."):
         if age3<=3 and drink<1.2 or drink>1.4:
             st.warning("your baby is drink not safe value of liter water per day")
         elif 3<age3<9 and drink<1.6 or drink>1.8:
@@ -107,25 +135,26 @@ with tabdrink:
         elif age3>50 and drink<2.5 or drink>3.0:
             st.warning("you are drink not safe value of liter water per day")
         elif age3<=3 and 1.2<=drink<=1.4:
-            st.warning("your baby is drink normal value of liter water per day")
+            st.success("your baby is drink normal value of liter water per day")
         elif 3<age3<9 and 1.6<=drink<=1.8:
-            st.warning("you are drink normal value of liter water per day")
+            st.success("you are drink normal value of liter water per day")
         elif 9<=age3<=13 and 2.1<=drink<=2.4:
-            st.warning("you are drink normal value of liter water per day")
+            st.success("you are drink normal value of liter water per day")
         elif 14<=age3<=18 and 2.3<=drink<=3.3:
-            st.warning("you are drink normal value of liter water per day")
+            st.success("you are drink normal value of liter water per day")
         elif 19<=age3<=50 and 2.7<=drink<=3.7:
-            st.warning("you are drink normal value of liter water per day")
+            st.success("you are drink normal value of liter water per day")
         elif age3>50 and 2.5<=drink<=3:
-            st.warning("you are drink normal value of liter water per day")
+            st.success("you are drink normal value of liter water per day")
         else:
             st.error("you write wrong but..... HOW CAN YOU WRITE WRONG... THIS CANT BE TRUE")
 with tabheight:
+    st.title("all class color:1.red impossible(you write not a number),2.yellow easy(warning),3.green easy(normal height),4.blue easy(rare tall height)")
     st.header("test4.com")
     st.title("normal height")
     height=st.number_input("YoUr HeIgHt(meter):",min_value=0.0,max_value=2.5,value=1.7,step=0.01)
     age4=int(st.number_input("YoUr AgE:",min_value=0.0,max_value=130.0,value=18.0,step=1.0,key="height age"))
-    if st.button("sure?"):
+    if st.button("s...u. . .r...e?"):
         if age4<1 and height<0.40:
             st.warning("your baby height is shorter than the normal height")  
         elif age4==1 and height<0.65:
@@ -173,27 +202,27 @@ with tabheight:
         elif age4>=17 and height==1.90:
             st.info("your height is equal Gojo Satoru height (just search jujutsu kaisen)")
         elif age4<1 and 0.40<=height<=0.50:
-            st.info("your baby height is normal")  
+            st.success("your baby height is normal")  
         elif age4==1 and 0.65<=height<=0.85:
-            st.info("your baby height is normal")
+            st.success("your baby height is normal")
         elif 1<age<=2 and 0.75<=height<=0.95:
-            st.info("your baby height is normal")
+            st.success("your baby height is normal")
         elif 2<age<=3 and 0.85<=height<=1:
-            st.info("your baby height is normal")
+            st.success("your baby height is normal")
         elif 3<age<=4 and 0.9<=height<=1.05:
-            st.info("your baby height is normal")
+            st.success("your baby height is normal")
         elif 4<age<=5 and 1<=height<=1.1:
-            st.info("your baby height is normal")
+            st.success("your baby height is normal")
         elif 5<age<=7 and 1.05<=height<=1.3:
-            st.info("your baby height is normal")
+            st.success("your baby height is normal")
         elif 7<age<=10 and 1.3<=height<=1.4:
-            st.info("your height is normal")
+            st.success("your height is normal")
         elif 10<age<=13 and 1.4<=height<=1.5:
-            st.info("your height is normal")
+            st.success("your height is normal")
         elif 13<age<=16 and 1.5<=height<=1.7:
-            st.info("your height is normal")
+            st.success("your height is normal")
         elif age4>16 and 1.6<=height<=1.8:
-            st.info("your height is normal")
+            st.success("your height is normal")
 # 1	~75 cm
 # 2	~85 cm
 # 3	~95 cm
@@ -201,5 +230,7 @@ with tabheight:
 # 5 – 7	110 – 130
 # 8 – 10	130 – 140
 # 11 – 13	140 – 150
+# 14 – 16	150 – 170
+# Trên 16	160 – 180
 # 14 – 16	150 – 170
 # Trên 16	160 – 18050
